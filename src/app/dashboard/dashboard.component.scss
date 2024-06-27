@@ -60,7 +60,7 @@
     color: black;
 
 }
-.dashboad-text:hover, .result:hover, .examsTimeTable:hover, .course-enrolled{
+.dashboad-text:hover, .result:hover, .examsTimeTable:hover, .course-enrolled:hover, .announcement:hover, .accountSettings:hover{
     cursor: pointer;
     
 }
@@ -322,6 +322,7 @@
 
 .quick-links a:hover {
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .calendar-content p, .performance-content p {
