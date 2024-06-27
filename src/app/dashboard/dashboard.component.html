@@ -1,0 +1,155 @@
+<div class="container-fluid d-flex">
+
+    <!-- Left menu -->
+    <div class="app-menu">
+      <div class="menu-item">
+        
+        <img src="../../assets/images.png" width="30" height="30" alt="" class="bstsLogo">
+        <span routerLink="/home" routerLinkActive="active" class="nabest">NABEST</span>
+      </div>
+      <hr>
+      <div class="menu-item " >
+        <i class="bi bi-grid dashboard-logo " ></i>
+        <!-- <img src="../../assets/dashboard-logo.png" alt="" class="dashboard-logo" width="24" height="24" style="color: aqua;"> -->
+        <a (click)= "showDashboard()" routerLinkActive="active" class="dashboad-text">Dashboard</a>
+      </div>
+      <hr>
+      <!-- Accademics -->
+      <span  class="accademics"><strong>Accademics</strong></span>
+      <div  class="accademics-items">
+        <div class="menu-item">
+            <i class="bi bi-mortarboard"></i>
+            <a routerLink="" routerLinkActive="active" class="schedule" (click)= "showSchedule()">Schedule</a>
+          </div>
+          <div class="menu-item">
+            <i class="bi bi-calendar2-event"></i>
+            <a (click)= "showExamsTimeTable()" routerLinkActive="active" class="examsTimeTable">Exams Time Table</a>
+          </div>
+          <div class="menu-item">
+            <i class="bi bi-file-earmark-text" ></i>
+            <a (click)= "showResults()" routerLinkActive="active" class="result">Results</a>
+          </div>
+          <div class="menu-item">
+            <i class="bi bi-book"></i>
+            <a (click)= "showCourses()" routerLinkActive="active" class="course-enrolled">Courses Enrolled</a>
+          </div>
+      </div>
+      <hr>
+
+      <!-- Administrative -->
+      <span class="administrative"> Administrative</span>
+      <div class="administrative-items">
+        <div class="menu-item">
+            <i class="bi bi-coin"></i>
+            <a  routerLinkActive="active" class="finance">Finance</a>
+          </div>
+          <div class="menu-item">
+            <i class="bi bi-newspaper"></i>
+            <a  routerLinkActive="active" class="announcement">Announcements</a>
+          </div>
+      </div>
+      <hr>
+       <!-- Settings -->
+       <span class="administrative"> settings</span>
+       <div class="administrative-items">
+        
+           <div class="menu-item">
+            <i class="bi bi-gear"></i>
+             <a routerLink="/logout" routerLinkActive="active" class="accountSettings">Account settings</a>
+           </div>
+       </div>
+       <hr>
+
+       <div class="menu-item">
+        <!-- <i class="bi bi-box-arrow-right" ></i> -->
+        <a routerLink="/contact" routerLinkActive="active" class="logout btn btn-primary ">Logout</a>
+      </div>
+      
+      
+    </div>
+
+<div class="menu-content">
+ <!-- Navbar -->
+ <div class="container-fluid navbar">
+    <!-- welcome message -->
+
+    <img src="../../assets/demoProfile.png" alt="" width="36" height="36" class="profile">
+    <span class="profile_surname">Boateng</span>
+   
+</div>
+<hr class="navbar-hr">
+
+<!-- content of the dashboard -->
+<section id="dashboard-content"  *ngIf= "dashboard_content">
+ <!-- welcome message -->
+<div class="card welcome-text" >
+    <div class="card-body welcome-body " >
+     
+      <p class="card-text ">
+        <span class="date">{{ currentDate }}</span><br>
+         <span class="welcome-hand"><img src="../../assets/hand.png" alt="" width="24" height="24">  Welcome, Kingsford !</span>
+         <br>
+         <span class="update-text">We keep you updated on what is going on in the school</span>
+        </p>
+     <img src="../../assets/welcome4.png" alt="" width="200" height="150">
+    </div>
+  </div>
+
+  <div class="dashboard-widgets">
+    <div class="quick-links">
+        <h2>Quick Links</h2>
+        <ul>
+            <li><a href="#">📅 Upcoming Exams</a></li>
+            <li><a href="#">📄 Recent Results</a></li>
+            <li><a href="#">📚 Enrolled Courses</a></li>
+            <li><a href="#">📢 Announcements</a></li>
+        </ul>
+    </div>
+    <!-- <div class="notifications">
+        <h2>Notifications</h2>
+        <ul>
+            <li>New announcement: School reopens on July 5th.</li>
+            <li>Your exam timetable has been updated.</li>
+            <li>New grades have been posted for Math 101.</li>
+        </ul>
+    </div> -->
+    <div class="calendar">
+        <h2>Calendar</h2>
+        <div class="calendar-content">
+            <p><strong>July 1:</strong> Math 101 Exam</p>
+            <p><strong>July 5:</strong> School Reopens</p>
+            <p><strong>July 10:</strong> Science Fair</p>
+        </div>
+    </div>
+    <div class="recent-activity">
+        <h2>Recent Activity</h2>
+        <ul>
+            <li>Viewed course materials for History 202.</li>
+            <li>Submitted assignment for English 101.</li>
+            <li>Checked grades for Chemistry 102.</li>
+        </ul>
+    </div>
+    <div class="academic-performance">
+        <h2>Academic Performance</h2>
+        <div class="performance-content">
+            <p><strong>Math:</strong> A</p>
+            <p><strong>Science:</strong> B+</p>
+            <p><strong>History:</strong> B</p>
+            
+        </div>
+    </div>
+</div>
+</section>
+
+            <!-- content of the schedule -->
+             <app-schedule *ngIf= "schedule_content"></app-schedule>
+             <app-exams-time-table *ngIf= "exams_time_table"></app-exams-time-table>
+             <app-results *ngIf= "show_results"></app-results>
+             <app-courses *ngIf= "show_courses"></app-courses>
+        </div>
+</div>
+
+<!-- <router-outlet></router-outlet> -->
+
+<!-- Dashboard -->
+

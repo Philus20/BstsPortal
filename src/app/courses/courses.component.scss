@@ -1,0 +1,33 @@
+.courses-container {
+    padding: 20px;
+}
+
+.courses-enrolled {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.courses-enrolled h2 {
+    color: #0d6efd;
+    margin-bottom: 20px;
+}
+
+.courses-enrolled table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.courses-enrolled th, .courses-enrolled td {
+    border: 1px solid #f0f0f0;
+    padding: 10px;
+    text-align: left;
+}
+
+.courses-enrolled th {
+    background-color: #f8f9fa;
+    color: #0d6efd;
+}
