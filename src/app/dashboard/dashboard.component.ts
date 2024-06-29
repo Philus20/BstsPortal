@@ -20,7 +20,8 @@ import { FormsModule } from '@angular/forms';
   ], // Add DatePipe to the imports array
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
-  providers: [DatePipe,NgbModalConfig, NgbModal] // No need to add Router to providers array
+  providers: [DatePipe,NgbModalConfig, NgbModal] ,// No need to add Router to providers array
+  
 })
 export class DashboardComponent implements OnInit {
 

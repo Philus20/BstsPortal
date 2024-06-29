@@ -95,77 +95,77 @@
     </div>
   </div>
 
- 
+  <section>
+
+    <ngb-carousel
+    #carousel
+    [interval]="4000"
+    [pauseOnHover]="pauseOnHover"
+    [pauseOnFocus]="pauseOnFocus"
+    (slide)="onSlide($event)"
+  >
+    @for (img of images; track img; let i = $index) {
+      <ng-template ngbSlide>
+        <!-- <div class="carousel-caption">
+          <h3>My slide {{ i + 1 }} title</h3>
+        </div> -->
+        <a href="https://www.google.fr/?q=Number+{{ i + 1 }}" target="_blank" rel="nofollow noopener noreferrer">
+          <div class="picsum-img-wrapper">
+            <img [src]="img" alt="My image {{ i + 1 }} description" />
+          </div>
+        </a>
+      </ng-template>
+    }
+  </ngb-carousel>
+  
+  <hr />
+  
+  <!-- <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="pauseOnHover" [(ngModel)]="pauseOnHover" />
+    <label class="form-check-label" for="pauseOnHover">Pause on hover</label>
+  </div>
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="pauseOnFocus" [(ngModel)]="pauseOnFocus" />
+    <label class="form-check-label" for="pauseOnFocus">Pause on focus</label>
+  </div>
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="unpauseOnArrow" [(ngModel)]="unpauseOnArrow" />
+    <label class="form-check-label" for="unpauseOnArrow">Unpause when clicking on arrows</label>
+  </div>
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="pauseOnIndicator" [(ngModel)]="pauseOnIndicator" />
+    <label class="form-check-label" for="pauseOnIndicator">Pause when clicking on navigation indicator</label>
+  </div>
+  <button type="button" (click)="togglePaused()" class="btn btn-outline-secondary btn-sm">
+    {{ paused ? 'Cycle' : 'Pause' }}
+  </button> -->
+    
+   
+    
+  </section>
+  <div class="card-container-1">
+    <div class="card-1">
+        <h3>Announcements</h3>
+        <p>Stay updated with the latest school news and announcements.</p>
+    </div>
+    <div class="card-1">
+        <h3>Upcoming Events</h3>
+        <p>Check out the upcoming events and activities in the school.</p>
+    </div>
+    <div class="card-1">
+        <h3>Quick Links</h3>
+        <ul>
+            <li><a href="#assignments">Assignments</a></li>
+            <li><a href="#grades">Grades</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#profile">Profile</a></li>
+        </ul>
+    </div>
+  </div>
+  
 </section>
 
 <!-- Images sections -->
-<section>
-
-  <ngb-carousel
-	#carousel
-	[interval]="4000"
-	[pauseOnHover]="pauseOnHover"
-	[pauseOnFocus]="pauseOnFocus"
-	(slide)="onSlide($event)"
->
-	@for (img of images; track img; let i = $index) {
-		<ng-template ngbSlide>
-			<!-- <div class="carousel-caption">
-				<h3>My slide {{ i + 1 }} title</h3>
-			</div> -->
-			<a href="https://www.google.fr/?q=Number+{{ i + 1 }}" target="_blank" rel="nofollow noopener noreferrer">
-				<div class="picsum-img-wrapper">
-					<img [src]="img" alt="My image {{ i + 1 }} description" />
-				</div>
-			</a>
-		</ng-template>
-	}
-</ngb-carousel>
-
-<hr />
-
-<!-- <div class="form-check">
-	<input type="checkbox" class="form-check-input" id="pauseOnHover" [(ngModel)]="pauseOnHover" />
-	<label class="form-check-label" for="pauseOnHover">Pause on hover</label>
-</div>
-<div class="form-check">
-	<input type="checkbox" class="form-check-input" id="pauseOnFocus" [(ngModel)]="pauseOnFocus" />
-	<label class="form-check-label" for="pauseOnFocus">Pause on focus</label>
-</div>
-<div class="form-check">
-	<input type="checkbox" class="form-check-input" id="unpauseOnArrow" [(ngModel)]="unpauseOnArrow" />
-	<label class="form-check-label" for="unpauseOnArrow">Unpause when clicking on arrows</label>
-</div>
-<div class="form-check">
-	<input type="checkbox" class="form-check-input" id="pauseOnIndicator" [(ngModel)]="pauseOnIndicator" />
-	<label class="form-check-label" for="pauseOnIndicator">Pause when clicking on navigation indicator</label>
-</div>
-<button type="button" (click)="togglePaused()" class="btn btn-outline-secondary btn-sm">
-	{{ paused ? 'Cycle' : 'Pause' }}
-</button> -->
-  
- 
-  
-</section>
-<div class="card-container-1">
-  <div class="card-1">
-      <h3>Announcements</h3>
-      <p>Stay updated with the latest school news and announcements.</p>
-  </div>
-  <div class="card-1">
-      <h3>Upcoming Events</h3>
-      <p>Check out the upcoming events and activities in the school.</p>
-  </div>
-  <div class="card-1">
-      <h3>Quick Links</h3>
-      <ul>
-          <li><a href="#assignments">Assignments</a></li>
-          <li><a href="#grades">Grades</a></li>
-          <li><a href="#schedule">Schedule</a></li>
-          <li><a href="#profile">Profile</a></li>
-      </ul>
-  </div>
-</div>
 
             <!-- content of the schedule -->
              <app-schedule *ngIf= "schedule_content"></app-schedule>
@@ -235,4 +235,3 @@
   </div>
 </div> -->
 
-<
