@@ -62,7 +62,7 @@
 
        <div class="menu-item">
         <!-- <i class="bi bi-box-arrow-right" ></i> -->
-        <a routerLink="/contact" routerLinkActive="active" class="logout btn btn-primary ">Logout</a>
+        <a routerLink="/contact" routerLinkActive="active" class="logout btn btn-primary " (click)="open(content)">Logout</a>
       </div>
       
       
@@ -95,51 +95,77 @@
     </div>
   </div>
 
-  <div class="dashboard-widgets">
-    <div class="quick-links">
-        <h2>Quick Links</h2>
-        <ul>
-            <li><a (click)= "showExamsTimeTable()">📅 Upcoming Exams</a></li>
-            <li><a (click)= "showResults()">📄 Recent Results</a></li>
-            <li><a (click)= "showCourses()">📚 Enrolled Courses</a></li>
-            <li><a (click)= "showAnnouncements()">📢 Announcements</a></li>
-        </ul>
-    </div>
-    <!-- <div class="notifications">
-        <h2>Notifications</h2>
-        <ul>
-            <li>New announcement: School reopens on July 5th.</li>
-            <li>Your exam timetable has been updated.</li>
-            <li>New grades have been posted for Math 101.</li>
-        </ul>
-    </div> -->
-    <div class="calendar">
-        <h2>Calendar</h2>
-        <div class="calendar-content">
-            <p><strong>July 1:</strong> Math 101 Exam</p>
-            <p><strong>July 5:</strong> School Reopens</p>
-            <p><strong>July 10:</strong> Science Fair</p>
-        </div>
-    </div>
-    <div class="recent-activity">
-        <h2>Recent Activity</h2>
-        <ul>
-            <li>Viewed course materials for History 202.</li>
-            <li>Submitted assignment for English 101.</li>
-            <li>Checked grades for Chemistry 102.</li>
-        </ul>
-    </div>
-    <div class="academic-performance">
-        <h2>Academic Performance</h2>
-        <div class="performance-content">
-            <p><strong>Math:</strong> A</p>
-            <p><strong>Science:</strong> B+</p>
-            <p><strong>History:</strong> B</p>
-            
-        </div>
-    </div>
-</div>
+ 
 </section>
+
+<!-- Images sections -->
+<section>
+
+  <ngb-carousel
+	#carousel
+	[interval]="4000"
+	[pauseOnHover]="pauseOnHover"
+	[pauseOnFocus]="pauseOnFocus"
+	(slide)="onSlide($event)"
+>
+	@for (img of images; track img; let i = $index) {
+		<ng-template ngbSlide>
+			<!-- <div class="carousel-caption">
+				<h3>My slide {{ i + 1 }} title</h3>
+			</div> -->
+			<a href="https://www.google.fr/?q=Number+{{ i + 1 }}" target="_blank" rel="nofollow noopener noreferrer">
+				<div class="picsum-img-wrapper">
+					<img [src]="img" alt="My image {{ i + 1 }} description" />
+				</div>
+			</a>
+		</ng-template>
+	}
+</ngb-carousel>
+
+<hr />
+
+<!-- <div class="form-check">
+	<input type="checkbox" class="form-check-input" id="pauseOnHover" [(ngModel)]="pauseOnHover" />
+	<label class="form-check-label" for="pauseOnHover">Pause on hover</label>
+</div>
+<div class="form-check">
+	<input type="checkbox" class="form-check-input" id="pauseOnFocus" [(ngModel)]="pauseOnFocus" />
+	<label class="form-check-label" for="pauseOnFocus">Pause on focus</label>
+</div>
+<div class="form-check">
+	<input type="checkbox" class="form-check-input" id="unpauseOnArrow" [(ngModel)]="unpauseOnArrow" />
+	<label class="form-check-label" for="unpauseOnArrow">Unpause when clicking on arrows</label>
+</div>
+<div class="form-check">
+	<input type="checkbox" class="form-check-input" id="pauseOnIndicator" [(ngModel)]="pauseOnIndicator" />
+	<label class="form-check-label" for="pauseOnIndicator">Pause when clicking on navigation indicator</label>
+</div>
+<button type="button" (click)="togglePaused()" class="btn btn-outline-secondary btn-sm">
+	{{ paused ? 'Cycle' : 'Pause' }}
+</button> -->
+  
+ 
+  
+</section>
+<div class="card-container-1">
+  <div class="card-1">
+      <h3>Announcements</h3>
+      <p>Stay updated with the latest school news and announcements.</p>
+  </div>
+  <div class="card-1">
+      <h3>Upcoming Events</h3>
+      <p>Check out the upcoming events and activities in the school.</p>
+  </div>
+  <div class="card-1">
+      <h3>Quick Links</h3>
+      <ul>
+          <li><a href="#assignments">Assignments</a></li>
+          <li><a href="#grades">Grades</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#profile">Profile</a></li>
+      </ul>
+  </div>
+</div>
 
             <!-- content of the schedule -->
              <app-schedule *ngIf= "schedule_content"></app-schedule>
@@ -151,7 +177,62 @@
         </div>
 </div>
 
+
+<ng-template #content let-c="close" let-d="dismiss">
+	<div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">Hi there!</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+		<p>Hello, World!</p>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-outline-secondary" (click)="c('Save click')">Save</button>
+	</div>
+</ng-template>
+
+<!-- <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button> -->
+
 <!-- <router-outlet></router-outlet> -->
 
 <!-- Dashboard -->
 
+<!-- <div class="dashboard-widgets">
+  <div class="quick-links">
+      <h2>Quick Links</h2>
+      <ul>
+          <li><a (click)= "showExamsTimeTable()">📅 Upcoming Exams</a></li>
+          <li><a (click)= "showResults()">📄 Recent Results</a></li>
+          <li><a (click)= "showCourses()">📚 Enrolled Courses</a></li>
+          <li><a (click)= "showAnnouncements()">📢 Announcements</a></li>
+      </ul>
+  </div>
+  
+  <div class="calendar">
+      <h2>Calendar</h2>
+      <div class="calendar-content">
+          <p><strong>July 1:</strong> Math 101 Exam</p>
+          <p><strong>July 5:</strong> School Reopens</p>
+          <p><strong>July 10:</strong> Science Fair</p>
+      </div>
+  </div>
+  <div class="recent-activity">
+      <h2>Recent Activity</h2>
+      <ul>
+          <li>Viewed course materials for History 202.</li>
+          <li>Submitted assignment for English 101.</li>
+          <li>Checked grades for Chemistry 102.</li>
+      </ul>
+  </div>
+  <div class="academic-performance">
+      <h2>Academic Performance</h2>
+      <div class="performance-content">
+          <p><strong>Math:</strong> A</p>
+          <p><strong>Science:</strong> B+</p>
+          <p><strong>History:</strong> B</p>
+          
+      </div>
+  </div>
+</div> -->
+
+<

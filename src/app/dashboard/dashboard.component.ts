@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild } from '@angular/core';
 import { DatePipe ,CommonModule} from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { Router } from '@angular/router';
@@ -8,16 +8,19 @@ import { ResultsComponent } from '../results/results.component';
 import { CoursesComponent } from '../courses/courses.component';
 import { AnnouncementComponent } from '../announcement/announcement.component';
 import { AccountSettingsComponent } from '../account-settings/account-settings.component';
+import { NgbModal, NgbModalConfig } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCarousel, NgbCarouselModule, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
   imports: [RouterModule, DatePipe,CommonModule,ScheduleComponent,ExamsTimeTableComponent,ResultsComponent,CoursesComponent,
-    AnnouncementComponent, AccountSettingsComponent
+    AnnouncementComponent, AccountSettingsComponent,NgbCarouselModule,FormsModule
   ], // Add DatePipe to the imports array
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
-  providers: [DatePipe] // No need to add Router to providers array
+  providers: [DatePipe,NgbModalConfig, NgbModal] // No need to add Router to providers array
 })
 export class DashboardComponent implements OnInit {
 
@@ -29,8 +32,49 @@ export class DashboardComponent implements OnInit {
   show_courses : boolean = false;
   show_announcements : boolean = false;
   show_accountsettings : boolean = false;
+  paused = false;
+	unpauseOnArrow = false;
+	pauseOnIndicator = false;
+	pauseOnHover = true;
+	pauseOnFocus = true;
+   images = ['entrance2.jpg','assembly_hall.png'].map((filename) => `../../assets/${filename}`);
+  
 
-  constructor(private datePipe: DatePipe, private router: Router) { }
+  constructor(private datePipe: DatePipe, private router: Router,	config: NgbModalConfig,
+		private modalService: NgbModal) {
+    
+     }
+
+   
+
+	@ViewChild('carousel', { static: true }) carousel!: NgbCarousel;
+
+	togglePaused() {
+		if (this.paused) {
+			this.carousel.cycle();
+		} else {
+			this.carousel.pause();
+		}
+		this.paused = !this.paused;
+	}
+
+	onSlide(slideEvent: NgbSlideEvent) {
+		if (
+			this.unpauseOnArrow &&
+			slideEvent.paused &&
+			(slideEvent.source === NgbSlideEventSource.ARROW_LEFT || slideEvent.source === NgbSlideEventSource.ARROW_RIGHT)
+		) {
+			this.togglePaused();
+		}
+		if (this.pauseOnIndicator && !slideEvent.paused && slideEvent.source === NgbSlideEventSource.INDICATOR) {
+			this.togglePaused();
+		}
+	}
+
+
+     open(content: any) {
+      this.modalService.open(content);
+    }
 
   ngOnInit(): void {
     const today = new Date();

@@ -1,4 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+  // ...
+} from '@angular/animations';
 import { RouterOutlet } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
@@ -7,7 +15,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   standalone: true,
   imports: [RouterOutlet,DashboardComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
+  animations: [
+    // animation triggers go here
+  ]
 })
 export class AppComponent {
   title = 'BstsPortal';
