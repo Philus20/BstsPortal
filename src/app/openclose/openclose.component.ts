@@ -7,10 +7,11 @@ import {
   transition,
   // ...
 } from '@angular/animations';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-openclose',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   animations: [
     trigger('openClose', [
       // ...
@@ -47,13 +48,25 @@ import {
       transition('* => *', [
         animate('1s')
       ]),
-    ])],
+    ]),
+    trigger('myInsertRemoveTrigger', [
+      transition(':enter', [
+        style({ opacity: 0 , position:'absolute',top:'0px'}),
+        animate('10000ms 10000ms ease', style({ opacity: 1, position:'absolute', top:'200px'})),
+      ]),
+      transition(':leave', [
+        animate('100000ms', style({ opacity: 0 }))
+      ])
+    ]),
+  ],
+    
   templateUrl: './openclose.component.html',
   styleUrl: './openclose.component.scss'
 })
 export class OpencloseComponent {
   constructor(){}
   isOpen = true;
+  isShown = true;
 
   toggle() {
     this.isOpen = !this.isOpen;

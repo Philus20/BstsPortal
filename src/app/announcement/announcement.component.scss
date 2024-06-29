@@ -19,49 +19,84 @@
     background-color: #ffffff;
   }
   
-  .announcement-item {
+  // .announcement-item {
+  //   background-color: #ffffff;
+  //   padding: 15px;
+  //   margin-bottom: 15px;
+  //   border-radius: 8px;
+  //   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  // }
+  
+  // .announcement-item h3 {
+  //   font-size: 1.5em;
+  //   margin-bottom: 10px;
+  //   color: #007bff;
+  // }
+  
+  // .announcement-item p {
+  //   margin: 5px 0;
+  //   font-size: 1em;
+  //   color: #555;
+  // }
+  
+  // .announcement-item p strong {
+  //   color: #333;
+  // }
+  
+  // @media (max-width: 600px) {
+  //   .announcements {
+  //     padding: 15px;
+  //   }
+  
+  //   .announcements h2 {
+  //     font-size: 1.5em;
+  //   }
+  
+  //   .announcement-item {
+  //     padding: 10px;
+  //   }
+  
+  //   .announcement-item h3 {
+  //     font-size: 1.2em;
+  //   }
+  
+  //   .announcement-item p {
+  //     font-size: 0.9em;
+  //   }
+  // }
+  
+
+  .announcement-item{
+    display: flex ;
+    //padding-bottom: 50vh;
+    justify-content: center;
+    align-items: center;
+   // width: 70vw;
+    //background-color: #ffffff;
+    //margin-left: 4rem;
     background-color: #ffffff;
-    padding: 15px;
+     padding: 15px;
     margin-bottom: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+     border-radius: 8px;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
-  
-  .announcement-item h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #007bff;
+
+  .card-content{
+    color: #000000;
+    background-color: #ffffff;
+    width: 290px;
+    height: 290px;
   }
-  
-  .announcement-item p {
-    margin: 5px 0;
-    font-size: 1em;
-    color: #555;
+
+  c
+
+  .card-image1{
+    
+    margin-right: 9px;
+    //vertical-align: middle;
+    // width: 290px;
+    // height: 290px;
+    // padding-left: 9rem;
+    // border-radius: 10px
+    border-radius: 50%;
   }
-  
-  .announcement-item p strong {
-    color: #333;
-  }
-  
-  @media (max-width: 600px) {
-    .announcements {
-      padding: 15px;
-    }
-  
-    .announcements h2 {
-      font-size: 1.5em;
-    }
-  
-    .announcement-item {
-      padding: 10px;
-    }
-  
-    .announcement-item h3 {
-      font-size: 1.2em;
-    }
-  
-    .announcement-item p {
-      font-size: 0.9em;
-    }
-  }
-  
