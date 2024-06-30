@@ -1,11 +1,11 @@
 <div class="container-fluid d-flex">
 
     <!-- Left menu -->
-    <div class="app-menu">
+    <div class="app-menu sidenav" [class.active]= "showAppMenu">
       <div class="menu-item">
         
         <img src="../../assets/images.png" width="30" height="30" alt="" class="bstsLogo">
-        <span routerLink="/home" routerLinkActive="active" class="nabest">NABEST</span>
+        <span routerLink="/home" routerLinkActive="active" class="nabest">Nana Brentu SHTS</span>
       </div>
       <hr>
       <div class="menu-item " >
@@ -31,7 +31,7 @@
           </div>
           <div class="menu-item">
             <i class="bi bi-book"></i>
-            <a (click)= "showCourses()" routerLinkActive="active" class="course-enrolled">Courses Enrolled</a>
+            <a (click)= "showCourses()" routerLinkActive="active" class="course-enrolled">Programme</a>
           </div>
       </div>
       <hr>
@@ -68,35 +68,37 @@
       
     </div>
 
-<div class="menu-content">
+<div class="menu-content" (click)="closeMenu()" [class.dim]= "showAppMenu">
  <!-- Navbar -->
  <div class="container-fluid navbar">
     <!-- welcome message -->
 
-    <img src="../../assets/demoProfile.png" alt="" width="36" height="36" class="profile">
-    <span class="profile_surname">Boateng</span>
+    <i class="bi bi-list" (click)="showAppMenuContent(); $event.stopPropagation()"></i>
+    
+    <img src="../../assets/demoProfile.png" alt="" width="36" height="36" class="profile"style="">
+    <span class="profile_surname" style="color: black;">Boateng</span>
    
 </div>
 <hr class="navbar-hr">
 
 <!-- content of the dashboard -->
-<section id="dashboard-content"  *ngIf= "dashboard_content">
+<div id="dashboard-content"  *ngIf= "dashboard_content">
  <!-- welcome message -->
 <div class="card welcome-text" >
     <div class="card-body welcome-body " >
      
-      <p class="card-text ">
+      <div class="card-text ">
         <span class="date">{{ currentDate }}</span><br>
-         <span class="welcome-hand"><img src="../../assets/hand.png" alt="" width="24" height="24">  Welcome, Kingsford !</span>
-         <br>
-         <span class="update-text">We keep you updated on what is going on in the school</span>
-        </p>
-     <img src="../../assets/welcome4.png" alt="" width="200" height="150">
+         <img src="../../assets/hand.png" alt="" width="20" height="20"> <span class="welcome-hand">Nana Brentu SHTS Welcomes you, Kingsford !</span>
+         
+         <p class="update-text">We keep you updated on what is going on in the school</p>
+      </div>
+     <img src="../../assets/welcome5-removebg-preview (1).png" alt="" width="250" height="180">
     </div>
   </div>
 
-  <section>
-
+  <section id="carousel">
+<div id="carousel">
     <ngb-carousel
     #carousel
     [interval]="4000"
@@ -105,11 +107,11 @@
     (slide)="onSlide($event)"
   >
     @for (img of images; track img; let i = $index) {
-      <ng-template ngbSlide>
+      <ng-template ngbSlide class="slide">
         <!-- <div class="carousel-caption">
           <h3>My slide {{ i + 1 }} title</h3>
         </div> -->
-        <a href="https://www.google.fr/?q=Number+{{ i + 1 }}" target="_blank" rel="nofollow noopener noreferrer">
+        <a href="" target="_blank" rel="nofollow noopener noreferrer">
           <div class="picsum-img-wrapper">
             <img [src]="img" alt="My image {{ i + 1 }} description" />
           </div>
@@ -117,7 +119,7 @@
       </ng-template>
     }
   </ngb-carousel>
-  
+</div>
   <hr />
   
   <!-- <div class="form-check">
@@ -163,7 +165,7 @@
     </div>
   </div>
   
-</section>
+</div>
 
 <!-- Images sections -->
 

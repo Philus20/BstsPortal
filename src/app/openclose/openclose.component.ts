@@ -71,6 +71,18 @@ export class OpencloseComponent {
   toggle() {
     this.isOpen = !this.isOpen;
   }
+
+  isOpen1 = false;
+
+  toggleMenu() {
+    this.isOpen1 = !this.isOpen1;
+  
+}
+closeMenu() {
+  if (this.isOpen) {
+    this.isOpen = false;
+  }
+}
 }
 // animations: [
   //   trigger('openClose', [

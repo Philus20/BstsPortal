@@ -1,4 +1,4 @@
-<nav>
+<!-- <nav>
     <button type="button" (click)="toggle()">Toggle Open/Close</button>
   </nav>
   
@@ -8,4 +8,19 @@
 
   <div @myInsertRemoveTrigger *ngIf="isShown" class="insert-remove-container">
     <p>The box is inserted</p>
+  </div> -->
+  <!-- app.component.html -->
+<div class="sidenav" [class.active]= "isOpen1">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</div>
+<div class="main">
+  <button (click)="toggleMenu()" >☰ Toggle Menu</button>
+  <div [class.dim]= "isOpen1">
+    <p>This is the main content of the page. It will be disabled when the menu is open.</p>
   </div>
+</div>

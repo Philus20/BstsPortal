@@ -46,8 +46,16 @@ export class DashboardComponent implements OnInit {
     
      }
 
-   
+   showAppMenu = false
+   showAppMenuContent(){
+    this.showAppMenu =!this.showAppMenu;
+   }
 
+   closeMenu() {
+    if (this.showAppMenu) {
+      this.showAppMenu = false;
+    }
+  }
 	@ViewChild('carousel', { static: true }) carousel!: NgbCarousel;
 
 	togglePaused() {
@@ -90,6 +98,7 @@ export class DashboardComponent implements OnInit {
     this.show_courses = false;
     this.show_announcements = false;
     this.show_accountsettings = false;
+    this.closeMenu()
 
   }
   showSchedule(){
@@ -100,6 +109,7 @@ export class DashboardComponent implements OnInit {
     this.show_courses = false;
     this.show_announcements = false;
     this.show_accountsettings = false;
+    this.closeMenu()
 
   }
 showExamsTimeTable(){
@@ -110,7 +120,7 @@ showExamsTimeTable(){
   this.show_courses = false;
   this.show_announcements = false;
   this.show_accountsettings = false;
-
+  this.closeMenu()
 }
 
 showResults(){

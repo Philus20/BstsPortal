@@ -1,65 +1,79 @@
-<div class="exams-results">
+<div class="exams-results" id="results">
     <h2>Exams Results</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Subject</th>
-                <th>Scores</th>
-                <th>Grade</th>
-                <th>Position in Class</th>
-                <th>Overall Position</th>
-                <th>Comments</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Math 101</td>
-                <td>80</td>
-                <td>A</td>
-                <td>1st</td>
-                <td>2nd</td>
-                <td>Excellent performance!</td>
-            </tr>
-            <tr>
-                <td>History 202</td>
-                <td>75</td>
-                <td>B+</td>
-                <td>3rd</td>
-                <td>5th</td>
-                <td>Good understanding of the material.</td>
-            </tr>
-            <tr>
-                <td>Science 101</td>
-                <td>70</td>
-                <td>B</td>
-                <td>5th</td>
-                <td>7th</td>
-                <td>Need to improve on experiments.</td>
-            </tr>
-            <tr>
-                <td>English 101</td>
-                <td>90</td>
-                <td>A-</td>
-                <td>2nd</td>
-                <td>3rd</td>
-                <td>Very well written essays.</td>
-            </tr>
-            <tr>
-                <td>Chemistry 102</td>
-                <td>78</td>
-                <td>B+</td>
-                <td>4th</td>
-                <td>6th</td>
-                <td>Good work, keep practicing.</td>
-            </tr>
-            <tr>
-                <td>Total</td>
-                <td>393</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-        </tbody>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Scores</th>
+          <th>Grade</th>
+          <th>Position in Class</th>
+          <th>Overall Position</th>
+          <th>Comments</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Math 101</td>
+          <td>80</td>
+          <td>A</td>
+          <td>1st</td>
+          <td>2nd</td>
+          <td>Excellent performance!</td>
+        </tr>
+        <tr>
+          <td>History 202</td>
+          <td>75</td>
+          <td>B+</td>
+          <td>3rd</td>
+          <td>5th</td>
+          <td>Good understanding of the material.</td>
+        </tr>
+        <tr>
+          <td>Science 101</td>
+          <td>70</td>
+          <td>B</td>
+          <td>5th</td>
+          <td>7th</td>
+          <td>Need to improve on experiments.</td>
+        </tr>
+        <tr>
+          <td>English 101</td>
+          <td>90</td>
+          <td>A-</td>
+          <td>2nd</td>
+          <td>3rd</td>
+          <td>Very well written essays.</td>
+        </tr>
+        <tr>
+          <td>Chemistry 102</td>
+          <td>78</td>
+          <td>B+</td>
+          <td>4th</td>
+          <td>6th</td>
+          <td>Good work, keep practicing.</td>
+        </tr>
+        <tr>
+          <td>Total</td>
+          <td>393</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+      </tbody>
     </table>
-</div>
+  </div>
+  
+  <button class="btn btn-primary" 
+          [printStyle]="{
+            td: {'color': 'black', 'border': '1px solid black', 'padding': '8px'}, 
+            th: {'border': '1px solid black', 'padding': '8px', 'background-color': '#f2f2f2', 'text-align': 'left'}, 
+            h2: {'border': '1px solid black', 'padding': '5px', 'margin-bottom': '10px'}, 
+            table: {'border': '1px solid black', 'width': '100%', 'border-collapse': 'collapse', 'background-color': 'white'},
+            'tbody tr:nth-child(odd)': {'background-color': '#f9f9f9'}
+          }"
+          printSectionId="results"
+          ngxPrint>
+    Print
+  </button>
+  
