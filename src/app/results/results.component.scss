@@ -27,3 +27,29 @@
     background-color: #f8f9fa;
     color: #0d6efd;
 }
+
+@media only screen and (max-width: 768px) {
+    .exams-results.container-fluid {
+      padding: 10px; /* Adjust padding for smaller screens */
+    }
+  
+    .table {
+      width: 100%;
+      table-layout: fixed; /* Ensures table does not exceed the container width */
+    }
+  
+    .table th, .table td {
+      padding: 4px; /* Adjust padding inside table cells */
+      word-wrap: break-word; /* Ensures text breaks to prevent overflow */
+    }
+  
+    .table thead th {
+      text-align: left; /* Aligns header text to left, better for small screens */
+    }
+  
+    button.btn {
+      width: 100%; /* Makes the button span the full width of its container */
+      margin-top: 20px; /* Adds space above the button */
+    }
+  }
+  

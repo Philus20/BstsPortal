@@ -216,17 +216,17 @@ span .carousel-control-prev-icon{
   position: relative;
   left: 3rem;
 }
-.card-container-1{
-  margin-left: -11px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-}
-.card-1{
-  margin-left: -11px;
-        width: 100%;
-  height: fit-content;
-}
+// .card-container-1{
+//   margin-left: -11px;
+//         width: 100%;
+//         display: flex;
+//         justify-content: space-between;
+// }
+// .card-1{
+//   margin-left: -11px;
+//         width: 100%;
+//   height: fit-content;
+// }
 .menu-content{
   width: 1163px;
   color: #ffffff;
@@ -277,28 +277,34 @@ span .carousel-control-prev-icon{
   font-size: 5px;
 }
 .card-container-1 {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin-top: 2rem;
-  width: 92%;
-  position: relative;
-  left: 3rem;
+  flex-direction: column; /* Stacks the cards vertically */
+  align-items: center; /* Centers the cards horizontally */
+  margin-top: 1rem;
+  width: 100%; /* Full width of the viewport */
+  left: 0; /* Resets the left position */
+  padding: 0 15px; /* Increased padding for better edge spacing */
+  background-color: #f4f4f4; /* Light grey background for the container */
 }
 
 .card-1 {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 1rem;
-  margin: 1rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  flex: 1 1 30%;
-  max-width: 30%;
-  min-width: 250px;
-  color: #000000;
-  height: 250px;
+  flex: none; /* Disables flex sizing */
+  max-width: 100%; /* Each card can expand to the full container width */
+  margin: 10px 0; /* Increased vertical margin for better spacing */
+  height: auto; /* Height adjusts based on content */
+  padding: 20px; /* More padding for better readability */
+  background-color: #ffffff; /* White background for each card */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Slightly larger shadow for depth */
+  border: 1px solid #ccc; /* Lighter border color */
 }
+
+h3 {
+  color: #333; /* Darker color for headings for better readability */
+}
+
+p, ul {
+  color: #666; /* Lighter text color for readability */
+}
+
 
  }
 
@@ -375,6 +381,14 @@ span .carousel-control-prev-icon{
     border-radius: 11px;
     transition: 0.7s;
 }
+// .menu-item:hover{
+//   background-color: #4b8ced;
+//   font-size: 18px;
+//   padding: 5px 9px;
+//   color: #ffffff;
+//   border-radius: 11px;
+//   transition: 0.7s;
+// }
 
 .accademics,.administrative{
     font-family: Poppins;
