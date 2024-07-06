@@ -35,21 +35,22 @@
 .main-div{
     display: flex;
     justify-content: center;
+   
     
 }
 .side-menu{
     //padding: 30px 20px;
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #1a487a;
+    color: #9db7d2;
     position: relative;
     right: 30px;
     width: 20vw;
     height: 30vh;
 }
 .program-text{
-    padding: 6px 127px 8px 4px;
-    background-color: #0d6efd;
-    color: #ffffff;
+    padding: 6px 50px 8px 4px;
+    background-color: #ffffff;
+    color: #1a487a;
     font-family: nexa;
     font-weight: bold;
     font-size: 31px;
@@ -59,18 +60,19 @@
     font-family: Poppins;
     font-weight: bold;
     font-size: 30px;
+    color: #ffffff;
 }
 .course-tutor{
     display: flex;
     justify-content: space-between;
-    background-color: #ffffff;
-    color: #000000;
+    background-color:  #1a487a;
+    color: #ffffff;
     width: 40vw;
     height: 80vh;
 }
 .core-head{
-    background-color: #0d6efd;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #1a487a;
     font-weight: bold;
     font-family: nexa;
     padding: 4px 39px 15px 5px;
@@ -78,19 +80,19 @@
     margin-bottom: 10px;
 }
 .elective-head{
-    background-color: #0d6efd;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #1a487a;
     font-weight: bold;
     font-family: nexa;
     padding: 4px 20px 15px 5px;
     font-size: 24px;
     margin-bottom: 10px;
 }
-ul{
+.courses ul{
     margin-top: 22px;
     //font-family: Poppins;
     font-family: 'Open Sans', sans-serif;
-    list-style: none;
+    list-style:circle;
 
 }
 
@@ -99,8 +101,14 @@ ul{
     left: -5em;
     font-family: nexa;
 }
+.tutor-box ul{
+    margin-top: 22px;
+    //font-family: Poppins;
+    font-family: 'Open Sans', sans-serif;
+   list-style: none;
+}
 .tutor-head{
-    background-color: #0d6efd;
+   
     color: #ffffff;
     font-weight: bold;
     font-family: nexa;

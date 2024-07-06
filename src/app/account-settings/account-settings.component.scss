@@ -21,9 +21,9 @@ body {
  position: relative;
 }
 
-header h1 {
+ h1 {
   font-size: 2.2em;
-  color: #2c3e50;
+  color: #137feb;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -58,12 +58,13 @@ header h1 {
   margin-bottom: 20px;
 }
 
-.student-details h2, .guardian-details h2 {
-  font-size: 1.8em;
+.details h2, .Guardian h2 {
+  font-size: 1.3em;
   color: #34495e;
   margin-bottom: 10px;
   border-bottom: 2px solid #ecf0f1;
   padding-bottom: 5px;
+  text-align: center;
 }
 
 .detail {
@@ -84,7 +85,8 @@ header h1 {
   padding: 2px 4px;
   border-radius: 4px;
   min-width: 150px;
-  text-align: right;
+  text-align: left;
+  margin-left: 8rem;
   flex: 2;
 }
 
@@ -126,6 +128,7 @@ header h1 {
 
 h2 {
   margin-top: 20px;
+  margin-left: -9rem;
 }
 
 p.detail {
@@ -143,4 +146,12 @@ p.detail {
 .col-md-4, .col-md-8 {
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.details, .Guardian{
+ // padding: 0px 0rem 0 1rem;
+  
+}
+.details p, .Guardian p{
+  padding: 0px 0rem 0 4rem;
 }

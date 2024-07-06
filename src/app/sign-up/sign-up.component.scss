@@ -1,0 +1,15 @@
+.con {
+    background-image:
+    linear-gradient(to bottom, rgba(33, 150, 243, 0.8),  /* Lighter blue with transparency */
+    rgba(66, 165, 245, 0.8)),
+    url('../../assets/entrance2.jpg');
+    width: 100%; /* Full width of the container */
+    height: 140vh; /* 140% of the viewport height */
+    border-radius: 50%; /* Circular or rounded shape */
+    position: absolute; /* Positioned relative to its nearest positioned ancestor */
+    top: -34rem; /* Position the top edge 34rem above the top of the viewport */
+   // border: 2px solid red; /* Temporary border to help visualize the container */
+    z-index: 1000; /* Ensures it's on top if there are stacking issues */
+    background-position-y:12rem ;
+
+}

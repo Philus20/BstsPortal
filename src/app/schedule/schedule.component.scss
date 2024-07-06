@@ -8,41 +8,9 @@
 }
 
 .schedule h2, .schedule h3 {
-    color: #0d6efd;
+    color: #070809;
 }
 
- .timetable,  .events, .reminders {
-    margin-bottom: 20px;
-    color: #0d6efd;
-}
-
-.upcoming-classes ul, .assignment-deadlines ul, .exam-dates ul, .events ul, .reminders ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.upcoming-classes li, .assignment-deadlines li, .exam-dates li, .events li, .reminders li {
-    padding: 10px;
-    border-bottom: 1px solid #f0f0f0;
-}
-
-.upcoming-classes li span, .assignment-deadlines li span, .exam-dates li span, .events li span {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.timetable table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-    color: #0d6efd;
-}
-
-.timetable th, .timetable td {
-    border: 1px solid #f0f0f0;
-    padding: 10px;
-    text-align: center;
-}
 
 .timetable th {
     background-color: #f8f9fa;

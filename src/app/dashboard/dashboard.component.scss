@@ -309,9 +309,9 @@ p, ul {
  }
 
  //Laptops
- @media (min-width: 1281px) and (max-width: 1440px){
+ @media (min-width: 1281px){
   .container-fluid{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
    // background-color: #e9ecef;
 }
@@ -524,8 +524,8 @@ p, ul {
    // background-color: #0d6efd;
    background-color: #ffffff;
    color: #000000;
-  width: 1112px;
-    left: -13px;
+  width: 1099px;
+    left: -0.5px;
     display: flex;
     justify-content: flex-end;
 
@@ -562,14 +562,14 @@ p, ul {
     100% { background-position: 0% 50%; }
 }
 
-.navbar-hr{
-    width: 101%;
-    height: 1px;
-    background-color: #000000;
-    position: relative;
-    top: -17px;
-    left: -13px;
-}
+// .navbar-hr{
+//     width: 100%;
+//     height: 1px;
+//     background-color: #000000;
+//     position: relative;
+//     top: -17px;
+//     left: -13px;
+// }
 
 .welcome-body{
     width: 100%;

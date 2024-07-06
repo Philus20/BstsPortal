@@ -5,7 +5,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { OpencloseComponent } from './openclose/openclose.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
-
+import { SignUpComponent } from './sign-up/sign-up.component';
 export const routes: Routes = [
     // { path: '', redirectTo: '/animation', pathMatch: 'full' },
     { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -13,6 +13,7 @@ export const routes: Routes = [
 
       {path:'animation', component: OpencloseComponent},
     {path:"schedule", component:ScheduleComponent},
-    {path:"acc",component:AccountSettingsComponent}
+    {path:"acc",component:AccountSettingsComponent},
+    {path:"signup",component: SignUpComponent},
 
 ];   
