@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { NgbModal, NgbModalConfig } from '@ng-bootstrap/ng-bootstrap';
+import { LeftMenuComponent } from "../left-menu/left-menu.component";
+import { NavbarComponent } from "../navbar/navbar.component";
 
 @Component({
   selector: 'app-account-settings',
   standalone: true,
-  imports: [],
+  imports: [LeftMenuComponent, NavbarComponent],
   templateUrl: './account-settings.component.html',
   styleUrl: './account-settings.component.scss',
   providers: [NgbModalConfig, NgbModal],

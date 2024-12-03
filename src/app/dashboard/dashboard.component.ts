@@ -11,12 +11,14 @@ import { AccountSettingsComponent } from '../account-settings/account-settings.c
 import { NgbModal, NgbModalConfig } from '@ng-bootstrap/ng-bootstrap';
 import { NgbCarousel, NgbCarouselModule, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
+import { LeftMenuComponent } from '../left-menu/left-menu.component';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
   imports: [RouterModule, DatePipe,CommonModule,ScheduleComponent,ExamsTimeTableComponent,ResultsComponent,CoursesComponent,
-    AnnouncementComponent, AccountSettingsComponent,NgbCarouselModule,FormsModule
+    AnnouncementComponent, AccountSettingsComponent,NgbCarouselModule,FormsModule,LeftMenuComponent,NavbarComponent
   ], // Add DatePipe to the imports array
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],

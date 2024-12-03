@@ -1,0 +1,67 @@
+.container-fluid{
+    width: 27.85%;
+    height: 100vh;
+    background-color: #0A205C;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.head1{
+    
+    position: relative;
+    left: 50px;
+    top: 50.38px;
+    margin-bottom:79px ;
+}
+.admin-text{
+    font-family: 'Inter';
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: #ffffff;
+    font-size: 36px;
+}
+
+.app-menu{
+    position: relative;
+    left: 51.02px;
+    
+}
+.menu-item{
+    margin-bottom: 24.75px;
+}
+.bi{
+    width: 55.85px;
+    height: 50.63px;
+    color: #ffffff;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.item{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 23px;
+    font-family: 'inter';
+    font-weight: medium;
+}
+.menu-item:hover{
+    cursor: pointer;
+      background-color: #4b8ced;
+      font-size: 18px;
+      padding: 5px 9px;
+      color: #ffffff;
+      border-radius: 11px;
+      transition: 0.7s;
+}
+.active{
+    
+    background-color: #4b8ced;
+    font-size: 18px;
+    padding: 5px 9px;
+    color: #ffffff !important;
+    border-radius: 11px;
+   
+    
+  }

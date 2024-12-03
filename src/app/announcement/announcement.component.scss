@@ -4,7 +4,7 @@
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 850px;
-    margin: 0 auto;
+    margin: 10px auto;
     height: 85vh;
     overflow-y: scroll;
   }
@@ -99,4 +99,12 @@
     // padding-left: 9rem;
     // border-radius: 10px
     border-radius: 50%;
+  }
+  .menu-content{
+    width: 1163px;
+    color: #ffffff;
+    height: fit-content;
+     background-color: #e9ecef;
+    overflow-y: scroll;
+    
   }

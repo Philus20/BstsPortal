@@ -1,5 +1,6 @@
 .schedule {
-    background-color: white;
+    background-color: #e9ecef;
+
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -9,9 +10,21 @@
 
 .schedule h2, .schedule h3 {
     color: #070809;
+    text-align: center;
+    
 }
 
 
 .timetable th {
     background-color: #f8f9fa;
+    text-align: center;
 }
+.menu-content{
+    width: 1163px;
+    color: #ffffff;
+    height: fit-content;
+     background-color: #e9ecef;
+    overflow-y: scroll;
+    text-align: center;
+    
+  }

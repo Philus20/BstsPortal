@@ -1,53 +1,66 @@
-<div class="container mt-5">
-  <div class="row">
-      <!-- Profile Card -->
-      <div class="col-md-4">
-          <div class="card profile-section">
-              <img src="../../assets/demoProfile.png" class="card-img-top" alt="Profile Picture">
-              <div class="card-body">
-                  <h5 class="card-title"><strong>Full Name: </strong>Kofi Yeboahe</h5>
-                  <h5 class="card-text"><strong>Programme: </strong>Business Student</h5>
-                  <h5 class="card-title">House 5</h5>
-                  
-              </div>
-          </div>
-      </div>
 
-      <!-- Details -->
-      <div class="col-md-8">
-          <div class="card">
-              <div class="card-body">
-                  <h1>Student Information</h1>
-                  <div class="row">
-                      <div class="col-md-12 details">
-                          <h2>Personal Details</h2>
-                          <p class="detail"><strong>Full Name:</strong> <span id="fullName">John Doe</span></p>
-                          <p class="detail"><strong>Registration Number:</strong> <span id="registrationNumber">SHS123456</span></p>
-                          <p class="detail"><strong>Form:</strong> <span id="form">Senior</span></p>
-                          <p class="detail"><strong>Programme of Study:</strong> <span id="programmeStudy">Science</span></p>
-                          <p class="detail"><strong>House Name:</strong> <span id="houseName">Nkrumah House</span></p>
-                          <p class="detail"><strong>Date of Birth:</strong> <span id="dob">2004-05-16</span></p>
-                          <p class="detail"><strong>Gender:</strong> <span id="gender">Male</span></p>
-                          <p class="detail"><strong>Contact Number:</strong> <span contenteditable="true" id="contactNumber" (input)="onInputChange($event, 'contactNumber')">+233 24 123 4567</span></p>
-                          <p class="detail"><strong>Email:</strong> <span contenteditable="true" id="email" (input)="onInputChange($event, 'email')">john.doeexample.com</span></p>
-                          <p class="detail"><strong>Address:</strong> <span id="address">123 Main Street, Accra, Ghana</span></p>
-                      </div>
-                  </div>
-                  <div class="mt-3 Guardian">
-                      <h2>Guardian Details</h2>
-                      <p class="detail"><strong>Guardian Name:</strong> <span id="guardianName">Jane Doe</span></p>
-                      <p class="detail"><strong>Guardian Contact Number:</strong> <span id="guardianContactNumber">+233 24 987 6543</span></p>
-                      <p class="detail"><strong>Guardian Email:</strong> <span id="guardianEmail">jane.doeexample.com</span></p>
-                      <p class="detail"><strong>Guardian Address:</strong> <span id="guardianAddress">123 Main Street, Accra, Ghana</span></p>
-                  </div>
-                  <div class="text-center mt-4">
-                      <button id="saveButton" class="btn btn-primary" (click)="saveChanges()">Save Changes</button>
-                  </div>
-              </div>
-          </div>
+<div class="container-fluid d-flex">
+<app-left-menu></app-left-menu>
+
+<div class="menu-content">
+<app-navbar></app-navbar>
+    <div class="container">
+        <div class="row">
+            <!-- Profile Card -->
+            <div class="col-md-4">
+                <div class="card profile-section">
+                    <img src="../../assets/demoProfile.png" class="card-img-top" alt="Profile Picture">
+                    <div class="card-body">
+                        <h5 class="card-title"><strong>Full Name: </strong>Kofi Yeboahe</h5>
+                        <h5 class="card-text"><strong>Programme: </strong>Business Student</h5>
+                        <h5 class="card-title">House 5</h5>
+                        
+                    </div>
+                </div>
+            </div>
+      
+            <!-- Details -->
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h1>Student Information</h1>
+                        <div class="row">
+                            <div class="col-md-12 details">
+                                <h2>Personal Details</h2>
+                                <hr>
+                                <p class="detail"><strong>Full Name:</strong> <span id="fullName">John Doe</span></p>
+                                <p class="detail"><strong>Registration Number:</strong> <span id="registrationNumber">SHS123456</span></p>
+                                <p class="detail"><strong>Form:</strong> <span id="form">Senior</span></p>
+                                <p class="detail"><strong>Programme of Study:</strong> <span id="programmeStudy">Science</span></p>
+                                <p class="detail"><strong>House Name:</strong> <span id="houseName">Nkrumah House</span></p>
+                                <p class="detail"><strong>Date of Birth:</strong> <span id="dob">2004-05-16</span></p>
+                                <p class="detail"><strong>Gender:</strong> <span id="gender">Male</span></p>
+                                <p class="detail"><strong>Contact Number:</strong> <span contenteditable="true" id="contactNumber" (input)="onInputChange($event, 'contactNumber')">+233 24 123 4567</span></p>
+                                <p class="detail"><strong>Email:</strong> <span contenteditable="true" id="email" (input)="onInputChange($event, 'email')">john.doeexample.com</span></p>
+                                <p class="detail"><strong>Address:</strong> <span id="address">123 Main Street, Accra, Ghana</span></p>
+                            </div>
+                        </div>
+                        <div class="mt-3 Guardian">
+                            <h2>Guardian Details</h2>
+                            <hr>
+                            <p class="detail"><strong>Guardian Name:</strong> <span id="guardianName">Jane Doe</span></p>
+                            <p class="detail"><strong>Guardian Contact Number:</strong> <span id="guardianContactNumber">+233 24 987 6543</span></p>
+                            <p class="detail"><strong>Guardian Email:</strong> <span id="guardianEmail">jane.doeexample.com</span></p>
+                            <p class="detail"><strong>Guardian Address:</strong> <span id="guardianAddress">123 Main Street, Accra, Ghana</span></p>
+                        </div>
+                        <div class="text-center mt-4">
+                            <button id="saveButton" class="btn btn-primary" (click)="saveChanges()">Save Changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
       </div>
-  </div>
 </div>
+
+
+</div>
+
 
 <ng-template #content let-c="close" let-d="dismiss">
   <div class="modal-header">

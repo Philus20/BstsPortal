@@ -1,4 +1,13 @@
-<div class="exams-results container-fluid" id="results">
+
+
+<div class="container-fluid d-flex">
+<app-left-menu></app-left-menu>
+
+<div class="menu-content">
+
+  <app-navbar></app-navbar>
+
+  <div class="exams-results container-fluid" id="results">
     <h2>Exams Results</h2>
     <table class="table table-bordered table-striped" >
       <thead>
@@ -62,9 +71,7 @@
         </tr>
       </tbody>
     </table>
-  </div>
-  
-  <button class="btn btn-primary" 
+    <button class="btn btn-primary" 
           [printStyle]="{
             td: {'color': 'black', 'border': '1px solid black', 'padding': '8px'}, 
             th: {'border': '1px solid black', 'padding': '8px', 'background-color': '#f2f2f2', 'text-align': 'left'}, 
@@ -76,4 +83,9 @@
           ngxPrint>
     Print
   </button>
+  </div>
+</div>
+</div>
+  
+ 
   

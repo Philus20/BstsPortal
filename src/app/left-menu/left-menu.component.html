@@ -1,0 +1,79 @@
+<div class="app-menu sidenav" [class.active]= "showAppMenu">
+    <div class="menu-item">
+      
+      <img src="../../assets/images.png" width="30" height="30" alt="" class="bstsLogo">
+      <span routerLink="/home" routerLinkActive="active" class="nabest">Nana Brentu SHTS</span>
+    </div>
+    <hr>
+    <div class="menu-item " >
+      <i class="bi bi-grid dashboard-logo " ></i>
+      <!-- <img src="../../assets/dashboard-logo.png" alt="" class="dashboard-logo" width="24" height="24" style="color: aqua;"> -->
+      <a  routerLink="/dashboard" routerLinkActive="active" class="dashboad-text" >Dashboard</a>
+    </div>
+    <hr>
+    <!-- Accademics -->
+    <span  class="accademics"><strong>Academics</strong></span>
+    <div  class="accademics-items">
+      <div class="menu-item">
+          <i class="bi bi-mortarboard"></i>
+          <a routerLink="/schedule" routerLinkActive="active" class="schedule" >Schedule</a>
+        </div>
+        <div class="menu-item">
+          <i class="bi bi-calendar2-event"></i>
+          <a  routerLink="/time" routerLinkActive="active" class="examsTimeTable">Exams Time Table</a>
+        </div>
+        <div class="menu-item">
+          <i class="bi bi-file-earmark-text" ></i>
+          <a routerLink="/results" routerLinkActive="active" class="result">Results</a>
+        </div>
+        <div class="menu-item">
+          <i class="bi bi-book"></i>
+          <a  routerLink="/programme" routerLinkActive="active" class="course-enrolled">Programme</a>
+        </div>
+    </div>
+    <hr>
+
+    <!-- Administrative -->
+    <span class="administrative"> Administrative</span>
+    <div class="administrative-items">
+      <div class="menu-item">
+          <i class="bi bi-coin"></i>
+          <a  routerLinkActive="active" class="finance">Finance</a>
+        </div>
+        <div class="menu-item">
+          <i class="bi bi-newspaper"></i>
+          <a  routerLink="/announcement" routerLinkActive="active" class="announcement">Announcements</a>
+        </div>
+    </div>
+    <hr>
+     <!-- Settings -->
+     <span class="administrative"> Settings</span>
+     <div class="administrative-items">
+      
+         <div class="menu-item">
+          <i class="bi bi-gear"></i>
+           <a  routerLink="/account" routerLinkActive="active" class="accountSettings">Personal Information</a>
+         </div>
+     </div>
+     <hr>
+
+     <div class="menu-item">
+      <!-- <i class="bi bi-box-arrow-right" ></i> -->
+      <a routerLink="/contact" routerLinkActive="active" class="logout btn btn-primary " (click)="open(content)">Logout</a>
+    </div>
+    
+    
+  </div>
+
+  <ng-template #content let-c="close" let-d="dismiss">
+	<div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">Hi there!</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+		<p>Hello, World!</p>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-outline-secondary" (click)="c('Save click')">Save</button>
+	</div>
+</ng-template>

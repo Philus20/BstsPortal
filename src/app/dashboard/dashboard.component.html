@@ -1,85 +1,12 @@
 <div class="container-fluid d-flex">
 
     <!-- Left menu -->
-    <div class="app-menu sidenav" [class.active]= "showAppMenu">
-      <div class="menu-item">
-        
-        <img src="../../assets/images.png" width="30" height="30" alt="" class="bstsLogo">
-        <span routerLink="/home" routerLinkActive="active" class="nabest">Nana Brentu SHTS</span>
-      </div>
-      <hr>
-      <div class="menu-item " >
-        <i class="bi bi-grid dashboard-logo " ></i>
-        <!-- <img src="../../assets/dashboard-logo.png" alt="" class="dashboard-logo" width="24" height="24" style="color: aqua;"> -->
-        <a (click)= "showDashboard()" routerLinkActive="active" class="dashboad-text">Dashboard</a>
-      </div>
-      <hr>
-      <!-- Accademics -->
-      <span  class="accademics"><strong>Accademics</strong></span>
-      <div  class="accademics-items">
-        <div class="menu-item">
-            <i class="bi bi-mortarboard"></i>
-            <a routerLink="" routerLinkActive="active" class="schedule" (click)= "showSchedule()">Schedule</a>
-          </div>
-          <div class="menu-item">
-            <i class="bi bi-calendar2-event"></i>
-            <a (click)= "showExamsTimeTable()" routerLinkActive="active" class="examsTimeTable">Exams Time Table</a>
-          </div>
-          <div class="menu-item">
-            <i class="bi bi-file-earmark-text" ></i>
-            <a (click)= "showResults()" routerLinkActive="active" class="result">Results</a>
-          </div>
-          <div class="menu-item">
-            <i class="bi bi-book"></i>
-            <a (click)= "showCourses()" routerLinkActive="active" class="course-enrolled">Programme</a>
-          </div>
-      </div>
-      <hr>
-
-      <!-- Administrative -->
-      <span class="administrative"> Administrative</span>
-      <div class="administrative-items">
-        <div class="menu-item">
-            <i class="bi bi-coin"></i>
-            <a  routerLinkActive="active" class="finance">Finance</a>
-          </div>
-          <div class="menu-item">
-            <i class="bi bi-newspaper"></i>
-            <a (click)= "showAnnouncements()" routerLinkActive="active" class="announcement">Announcements</a>
-          </div>
-      </div>
-      <hr>
-       <!-- Settings -->
-       <span class="administrative"> settings</span>
-       <div class="administrative-items">
-        
-           <div class="menu-item">
-            <i class="bi bi-gear"></i>
-             <a (click)= "showAccount()" routerLinkActive="active" class="accountSettings">Personal Information</a>
-           </div>
-       </div>
-       <hr>
-
-       <div class="menu-item">
-        <!-- <i class="bi bi-box-arrow-right" ></i> -->
-        <a routerLink="/contact" routerLinkActive="active" class="logout btn btn-primary " (click)="open(content)">Logout</a>
-      </div>
-      
-      
-    </div>
-
+     <app-left-menu></app-left-menu>
+   
 <div class="menu-content" (click)="closeMenu()" [class.dim]= "showAppMenu">
  <!-- Navbar -->
- <div class="container-fluid navbar">
-    <!-- welcome message -->
-
-    <i class="bi bi-list" (click)="showAppMenuContent(); $event.stopPropagation()"></i>
-    
-    <img src="../../assets/demoProfile.png" alt="" width="36" height="36" class="profile"style="">
-    <span class="profile_surname" style="color: black;">Boateng</span>
-   
-</div>
-<hr class="navbar-hr">
+ <app-navbar></app-navbar>
+ 
 
 <!-- content of the dashboard -->
 <div id="dashboard-content"  *ngIf= "dashboard_content">
@@ -170,12 +97,12 @@
 <!-- Images sections -->
 
             <!-- content of the schedule -->
-             <app-schedule *ngIf= "schedule_content"></app-schedule>
+             <!-- <app-schedule *ngIf= "schedule_content"></app-schedule>
              <app-exams-time-table *ngIf= "exams_time_table"></app-exams-time-table>
              <app-results *ngIf= "show_results"></app-results>
              <app-courses *ngIf= "show_courses"></app-courses>
              <app-announcement *ngIf= "show_announcements"></app-announcement>
-             <app-account-settings *ngIf= "show_accountsettings"></app-account-settings>
+             <app-account-settings *ngIf= "show_accountsettings"></app-account-settings> -->
         </div>
 </div>
 
